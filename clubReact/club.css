@@ -1,0 +1,167 @@
+h1 {
+    font-family: 'Kaisei HarunoUmi', serif;
+}
+
+body{background-color: rgb(226, 226, 226);}
+nav{
+  max-width: 1200x; 
+  border: 5px solid rgb(0, 0, 0); 
+  background-color: rgb(140, 238, 255); 
+  list-style-type: none;
+  position: fixed;
+  width: 97%;
+  grid-area: menu;
+}
+ul{
+    list-style-type: none;
+}
+li.visited{
+    background-color: coral;
+}
+li:hover, li:active {
+    background-color: red;
+}
+li.active{
+    background-color: burlywood;
+}
+main{
+  background-color: rgb(255, 255, 255);
+  max-width: 70%;
+  margin: auto;
+  flex-direction: column;
+  grid-area: content;
+
+}
+
+footer{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+    padding-top: 5px;
+}
+.images{
+  margin: auto;
+  padding-top: 5px;
+  max-width: 50%;
+}
+
+.left{
+    text-align: left;
+}
+
+.leftp{
+    padding-left: 10px;
+}
+
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(155, 216, 216, 0.4);
+  }
+  
+.table{
+    border-color: black;
+    border-width: 600px;
+}
+
+label {
+    display: block;
+    margin: 1px;
+    padding: 1px;
+  }
+  
+  .field {
+    margin: 1px;
+    padding: 1px;
+  }
+  
+  input:invalid {
+    background-color: #ffdddd;
+  }
+  
+  form:invalid {
+    border: 5px solid #ffdddd;
+  }
+  
+  input:valid {
+    background-color: #ddffdd;
+  }
+  
+  form:valid {
+    border: 5px solid #ddffdd;
+  }
+  
+  input:required {
+    border-color: #800000;
+    border-width: 3px;
+  }
+  
+  input:required:invalid {
+    border-color: #c00000;
+  }
+
+.hide{
+    display: none ;
+    
+    }
+.show{
+    display: block !important;
+    }
+
+.wrap{
+    background-color: rgba(255, 0, 0, 0.3);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.wrapcenter{
+        background-color: aqua;
+        border-color: black;
+        border-radius: 1cm;
+        border-width: 1cm;
+        margin: auto;
+        position: relative;
+        max-width: 500px;
+        padding: 15px;
+        margin-top: 200px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  grid-area: titleBlock;
+  justify-self: start;
+  background-color: #90ff82;
+}
+
+footer {
+  grid-area: closing;
+  justify-self: center;
+  background-color: rgb(209, 209, 209);
+}
+
+.grid200{
+  grid-template-columns: 200px 200px;
+}
+
+.containers {
+  display:grid;
+  grid-template-columns: 1fr 5fr;
+  grid-row-gap: 10px;
+  grid-column-gap:0px;
+}

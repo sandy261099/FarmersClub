@@ -1,0 +1,11 @@
+{
+    "/members": {
+      "target": "http://localhost:3000"
+    },
+    "/activities": {
+        "target": "http://localhost:3000"
+      },
+      "/login": {
+        "target": "http://localhost:3000"
+      }
+  }

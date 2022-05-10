@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Farmers Marketing Club:</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="club.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&display=swap" rel="stylesheet">
+
+
+
+</head>
+  <body>
+    <nav>
+        <ul>
+          <div class="container">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html">Activities Page</a></li>
+          <li><a href="loginpage.html">Login</a></li>
+          <li class="active"><a href="membership.html">Membership</a></li>
+        </div>
+        </ul>
+      </nav>
+      <br><br><br>
+        <div class="center">
+        <h1>Apply here!!!</h1>
+        </div>
+     <main>
+        <form id="membership">
+            <div class="leftp">
+              <br>
+              <div class="containers">
+              <label><b>Userid:</b></label>
+              <input type="text" name="name" id="userid" required minlength="4" maxlength="10">
+              <label><b>Email: </b></label>
+              <input type="email" name="email" id="email" required>
+              <label><b>Password:</b></label>
+              <input type="password" name="password" id="password" required minlength="5" maxlength="8" size="10">
+            </div>
+              <br><br>
+            <div class="leftp">
+              <label><b>Comments:</b></label>
+              <textarea name="comments" id="comments" style="height: 100px; width: 500px; background-color: aquamarine;">Hey... say something!</textarea>
+              <label id="label"><b>Select the city:</b></label>
+              <select class="ui search dropdown" style="width: 500px">
+                <option value="">--Select the city--</option>
+                <option value="SL">San Leandro</option>
+                <option value="UC">Union City</option>
+                <option value="FM">Fremont</option>
+                <option value="PL">Pleasanton</option>
+              </select>
+            </div>
+          </div>
+              <br><br>
+              <div class="center">
+                <button type = "submit" id="register"><b>Register</b></button>
+              </div>
+              <br>
+      </form>      
+      <section id="ThanksDialogwrapper" class="wrap" >
+          <div id="ThanksDialog" class="wrapcenter">
+
+          </div>
+      </section>      
+    </main>
+    <footer>
+        <p>© 2021 Sandeep</p>
+    </footer>    
+  </body>
+  <script>
+    function logSubmit(event) {
+        event.preventDefault();
+        ThankDailog.innerHTML = "name:"+form.name.value+",email:"+form.email.value;
+    }   
+
+    const form = document.getElementById('membership');
+    const ThankDailog = document.getElementById('ThankDailog');
+    form.addEventListener('submit', logSubmit);
+</script>
+<script>
+  let signupv = document.getElementById("register")
+signupv.addEventListener('click', signupfunc);
+let section = document.getElementById("ThanksDialog")
+let sectionwrapper = document.getElementById("ThanksDialogwrapper")
+
+function signupfunc()
+        {
+            
+            let name = document.getElementById("userid")
+            let email = document.getElementById("email")
+            let level = document.getElementById("label")
+            
+
+            let p = document.createElement('p');
+                p.innerHTML = '<h1><b>Thank you for signing in</b></h1>' + 'Your Name' + ':' + name.value + ',' + 'Email' + ':'
+                + email.value + '.' +'<button type="button" id="closeid">Close</button>';
+            
+
+            section.appendChild(p);
+            sectionwrapper.classList.add("show");
+            
+            
+            let closevar = document.getElementById("closeid");
+            closevar.addEventListener('click', clearfunc);
+        }
+
+        function clearfunc()
+        {
+          sectionwrapper.classList.remove("show");
+          section.innerHTML = "";
+        }
+
+</script>
+</html>

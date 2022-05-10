@@ -1,0 +1,50 @@
+[
+  {
+    "state": "Iowa",
+    "cropsa": "973,112",
+    "cropsb": "379,614",
+    "increase": "156%"
+  },
+  {
+    "state": "Arizona",
+    "cropsa": "39,518",
+    "cropsb": "17,704",
+    "increase": "123%"
+  },
+  {
+    "state": "Illinios",
+    "cropsa": "708,105",
+    "cropsb": "318,636",
+    "increase": "122%"
+  },
+  {
+    "state": "Missouri",
+    "cropsa": "842,178",
+    "cropsb": "390,144",
+    "increase": "116%"
+  },
+  {
+    "state": "Mississippi",
+    "cropsa": "139,639",
+    "cropsb": "66,069",
+    "increase": "111%"
+  },
+  {
+    "state": "Nebrasaka",
+    "cropsa": "747,903",
+    "cropsb": "357,264",
+    "increase": "109%"
+  },
+  {
+    "state": "Vermont",
+    "cropsa": "40,555",
+    "cropsb": "20,120",
+    "increase": "102%"
+  },
+  {
+    "state": "Ohio",
+    "cropsa": "717,759",
+    "cropsb": "357,292",
+    "increase": "102%"
+  }
+]

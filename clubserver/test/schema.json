@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://locolhost:3000/activities",
+    "title": "Activity Schema",
+    "description": "A Schema that requires a JSON object",
+    
+    
+        "type": "object",
+        "properties":
+        {
+            "state": {
+            "description": "state",
+            "type": "string"
+          
+            },
+            "cropsa": {
+            "description": "year one",
+            "type": "string"
+            },
+            "cropsb":{
+            "description": "year two",
+            "type": "string"
+            },
+            "increase":{
+            "description": "No:of min the activity should perform",
+            "type": "string"
+            }
+        },
+        "required": ["state", "cropsa"],
+        "additionalProperties": false
+    }
+    
+  
+  
+  
+
