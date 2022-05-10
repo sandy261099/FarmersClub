@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clubpage</title>
+    <link rel="stylesheet" href="club.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&display=swap" rel="stylesheet">
+    <script src="eventData.js"></script>
+
+  </head>
+  <body>
+    <nav>
+        <ul>
+          <div class="container">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="activities.html">Activities Page</a></li>
+            <li><a href="loginpage.html">Login</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </div>
+        </ul>
+      </nav>
+      
+      <br><br><br>
+      <header>
+      <div class="center">
+      <h1>Activities</h1>
+      </header>
+    </div>
+    <main>
+
+    <div class="center">
+      <h2>Agriculture in The United States of America</h2>
+    </div>
+      <div class="center">
+        <img src="images/farming1.jpg" alt="Farming" width="400" height="300">
+      </div>
+      <table id='tableid'>
+        <tr>
+        <th>State</th>
+        <th>2017 Cover Crops</th>
+        <th>2017 Cover Crops</th>
+        <th>% Increase</th>
+        </tr>
+      </table>
+      <br><br><br>
+    </main>
+    <footer>
+        <p>© 2021 Sandeep</p>
+    </footer>
+    <script>
+    let table = document.getElementById('tableid');
+      events.forEach(function(a) {
+      let tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + a.state + '</td>' + 
+      '<td>' + a.cropsa + '</td>' +
+      '<td>' + a.cropsb + '</td>' +
+      '<td>' + a.increase + '</td>';
+      table.appendChild(tr);
+      });
+    </script>
+
+  </body>
+</html>

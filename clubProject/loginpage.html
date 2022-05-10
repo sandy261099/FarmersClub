@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Farmers Marketing Club:</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="club.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&display=swap" rel="stylesheet">
+
+
+
+</head>
+  <body>
+    <nav>
+        <ul>
+          <div class="container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities Page</a></li>
+            <li class="active"><a href="loginpage.html">Login</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </div>
+        </ul>
+      </nav>
+      <br><br><br>
+      <div class="center">
+       <h1>Login</h1>
+      </div>
+     <main>
+
+        <form>
+          <div class="leftp">
+              <label>Userid: </label>
+              <input type="text" name="name" id="userid" required minlength="4" maxlength="8" size="10">
+              <br><br>
+              <label>Password:</label>
+              <input type="password" name="password" id="password" required minlength="5" maxlength="10">
+          </div>
+              <br>
+              <div class="center">
+              <button type = "button">Login</button>
+              </div><br>
+      </form>    
+      
+      <section style="border:rgb(161, 255, 161); border-width:8px; border-style:dashed; background-color: antiquewhite;"> 
+        <div class="center">
+          <h1><b>Doodle!!</b></h1>
+        </div>
+        <button type = "button" id="add">Add</button>
+        <button type = "button" id="clear">Clear</button>
+        <br>
+        <section style="border:rgb(0, 0, 0); border-width:2px; border-style:inset; height: 15cm; background-color: rgb(255, 255, 255);">
+          <svg id=svid width=1200 height=15cm></svg>
+          
+        
+        </section>
+          
+      </section>
+
+    </main>
+    <footer>
+        <p>© 2021 Sandeep</p>
+    </footer>
+<script>
+
+  var mySVG = document.getElementById("svid");
+  var addi = document.getElementById("add");
+var maxSize = 50,
+  maxX = 1200,
+  maxY = 600;
+addi.addEventListener("click",randomCircle)
+function randomCircle() {
+  let x = Math.random()*(maxX - maxSize);
+  let y = Math.random()*(maxY - maxSize);
+  
+  let width = Math.random()*maxSize;
+  let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  circle.setAttribute("cx", x);
+  circle.setAttribute("cy", y);
+  circle.setAttribute("r" , width);
+
+  let colorStr = `rgb(${255*Math.random()}, ${255*Math.random()}, ${255*Math.random()})`;
+  circle.setAttribute("fill", colorStr);
+  circle.setAttribute("fill-opacity", 0.7);
+  mySVG.appendChild(circle);
+}
+let clear = document.getElementById("clear")
+clear.addEventListener('click', clearall);
+function clearall(){
+  let svg = document.getElementById('svid');
+  svg.innerHTML="";
+}
+</script>
+  </body>
+</html>
